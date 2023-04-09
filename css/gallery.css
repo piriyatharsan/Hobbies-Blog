@@ -1,0 +1,373 @@
+/*----------------------nav---------------------------------*/
+@import url('../css/fonts.css');
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+/*-------------variable-----------------------*/
+:root{
+    /*-------------fonts-------------------*/
+    --Abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Josefin:'Josefin',cursive;
+    --lexend:'lexend',cursive;
+    --Livvic:'Livvic',cursive;
+    /*--------x-----fonts-----------x--------*/
+     /*-------------color-------------------*/
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --midnight:#104f55;
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --crimson: #DC143C;
+    --lightGray:#D3D3D3;
+    
+    /*--------x-----color------------x-------*/
+}
+/*-------x------variable -----------x--------*/
+
+
+/*-------------global class-----------------*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--lexend);
+    font-size: 2.5rem;
+}
+h2{
+    font-family: var(--lexend);
+
+}
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+
+}
+span{
+  font-family: var(--Abel);  
+}
+
+.container{
+    margin:0 5vw;
+
+}
+.text-gray{
+    color: var(--text-gray);
+}
+
+p{
+    font-family: var(--lexend);
+    color: var(--text-light);
+}
+/*--------x-----global class------x-------------------------------*/
+
+
+/*-------------navbar--------------------------------------------------------------*/
+.nav{
+    background: white;
+    padding: 0.2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition:height 1s ease-in-out;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display:none ;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+
+}
+.collapse{
+    height: 30rem;
+}
+.nav .nav-menu{
+    justify-content:space-between ;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin:0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    
+    
+}
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family:var(--lexend);
+    font-size: 1.6rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 0.2rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+/*----------------------nav---------------------------------*/
+/*----------------------gallery---------------------------------*/
+main{
+    font-family: var(--Abel);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Abel);
+}
+input{
+    display: none;
+}
+.container{
+    width: 100%;
+    text-align: center;
+
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin:  40px 0 ;
+    
+}
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--crimson);
+    bottom:-10px ;
+    left:50%;
+    transform: translate(-50%);
+    animation: animate 4s linear infinite;
+
+
+}
+
+@keyframes animate{
+    0%{
+        width: 100px;
+
+    }
+    50%{
+        width: 200px;
+
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.top-content{
+    background-color:var(--lightGray) ;
+    width: 90%;
+    margin:0 auto 20px auto ;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px var(--lightGray);
+
+}
+h3{
+    height: 100%;
+    background-color: rgb(221, 221, 221);
+    line-height: 60px;
+    padding:0 50px ;
+    color: var(--crimson);
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    padding: 0 5px;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: var(--text-gray);
+    cursor:pointer;
+    transition: .5s;
+}
+
+label:hover{
+    color: var(--bg-color);
+}
+
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius:10px ;
+    box-shadow: 3px 3px 5px var(--lightGray);
+    cursor: pointer;
+    transition:.5s ;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+    
+}
+.pic::before{
+    content: "Photo Gallery";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    font-size: 22px;
+    margin-top:-100px ;
+    opacity: 0;
+    transition:.3s;
+    transition-delay:.2s;
+    z-index:1 ;
+
+}
+
+.pic:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    transition: .3s;
+
+
+}
+.pic:hover::after{
+    height: 100%;
+}
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+#check1:checked ~ .container .photo-gallery .pic {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: .5s;
+}
+
+#check2:checked ~ .container .photo-gallery .friends{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    
+}
+
+#check2:checked ~ .container .photo-gallery .photo,
+#check2:checked ~ .container .photo-gallery .visted{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+#check3:checked ~ .container .photo-gallery .photo{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    
+}
+
+#check3:checked ~ .container .photo-gallery .friends,
+#check3:checked ~ .container .photo-gallery .visted{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+#check4:checked ~ .container .photo-gallery .visted{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    
+}
+
+#check4:checked ~ .container .photo-gallery .friends,
+#check4:checked ~ .container .photo-gallery .photo{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,266 @@
+/*----------------------nav---------------------------------*/
+@import url('../css/fonts.css');
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/*-------------variable-----------------------*/
+:root{
+    /*-------------fonts-------------------*/
+    --Abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Josefin:'Josefin',cursive;
+    --lexend:'lexend',cursive;
+    --Livvic:'Livvic',cursive;
+    /*--------x-----fonts-----------x--------*/
+     /*-------------color-------------------*/
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --midnight:#104f55;
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --yellow:#f19a0e;
+    
+    /*--------x-----color------------x-------*/
+}
+/*-------x------variable -----------x--------*/
+
+
+/*-------------global class-----------------*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--lexend);
+    font-size: 2.5rem;
+}
+h2{
+    font-family: var(--lexend);
+
+}
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+
+}
+span{
+  font-family: var(--Abel);  
+}
+
+.container{
+    margin:0 5vw;
+
+}
+.text-gray{
+    color: var(--text-gray);
+}
+
+p{
+    font-family: var(--lexend);
+    color: var(--text-light);
+}
+/*--------x-----global class------x-------------------------------*/
+
+
+/*-------------navbar--------------------------------------------------------------*/
+.nav{
+    background: white;
+    padding: 0.2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition:height 1s ease-in-out;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display:none ;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+
+}
+.collapse{
+    height: 30rem;
+}
+.nav .nav-menu{
+    justify-content:space-between ;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin:0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    
+    
+}
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family:var(--lexend);
+    font-size: 1.6rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 0.2rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+/*----------------------nav---------------------------------*/
+/*----------------------main---------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Abel);
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+}
+.con{
+    width: 90%;
+    display: block;
+    margin: auto;
+
+    padding-top: 100px;
+}
+.article{
+    float: left;
+    width: 55%;
+    padding-top: 25px;
+}
+.image-section{
+    float: right;
+    width: 45%;
+  
+}
+.image-section img{
+    width: 500px;
+    height: 500px;
+}
+.article .title h1{
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.article .content h3{
+    margin-top: 30px;
+    color: var(--text-gray);
+    font-size: 22px;
+    font-weight: 500;
+}
+.article .content p{
+    margin-top: 10px;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--text-gray);
+}
+.article .content .button{
+    margin-top: 45px;
+
+}
+.article .content .button a{
+    background-color:var(--yellow) ;
+    padding: 10px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    
+}
+.article .content .button a:hover{
+    background-color: var(--midnight);
+}
+
+@media screen and (max-width:768px){
+    .con{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+
+    }
+    .article{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section{
+        float: none;
+        width: 100%;
+        margin-top: 50%;
+    }
+    .article .title h1{
+        font-size: 30px;
+
+    }
+    .article .content .button{
+        text-align: center;
+    }
+    .article .content .button a{
+        padding: 9px 16px;
+    }
+    
+}
+    
+
+
+
+/*--------x--------------main------------x---------------------*/

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!---- font Awsome icons-->
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/feedback.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-menu flex-row">
+        <div class="nav-brand">
+          <a href="#" class="text-gray">Hobbies</a>
+        </div>
+        <div class="toggle-collapse">
+          <div class="toggle-icons">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <div>
+          <ul class="nav-items">
+            <li class="nav-link">
+              <a href="/index.html">Home</a>
+            </li>
+            <li class="nav-link">
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li class="nav-link">
+              <a href="./gallery.html">Gallery</a>
+            </li> 
+            <li class="nav-link">
+              <a href="./feedback.html">FeedBack</a>
+            </li>
+            <li class="nav-link">
+              <a href="./aboutMe.html">About Me</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social text-gray">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </nav>
+    <!---------------------------feedback---------------------->
+    <div id="app">
+        <h2>Feedback Forum</h2>
+         <h4>put your thought about my website</h4>
+        <form @submit.prevent="addComment">
+          <label for="name">Name:</label>
+          <input type="text" id="name" v-model="newComment.name" placeholder="Enter your name...">
+          <label for="comment">Comment:</label>
+          <input type="text" id="comment" v-model="newComment.comment" placeholder="Enter your comment..."><br>
+          <button type="submit">Submit</button>
+        </form>
+        <p>Total Comments: {{ commentCount }}</p>
+        <ol>
+            <li v-for="comment in comments">{{ comment.name }}: {{ comment.comment }}</li>
+          </ol>
+        
+      </div>
+    <!------------x---------------feedback--------------x-------->
+    <script src="./js/feedback.js"></script>
+  </body>
+</html>
